@@ -1,0 +1,348 @@
+/* VideoIntro Component Styles */
+.heroContainer {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 0;
+}
+
+/* Ambient Diffused Glow Layer */
+.ambientVideoGlow {
+  position: absolute;
+  inset: -15%;
+  width: 130%;
+  height: 130%;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 143, 211, 0.35) 0%,
+    rgba(0, 196, 255, 0.2) 35%,
+    rgba(245, 158, 11, 0.12) 60%,
+    transparent 80%
+  );
+  filter: blur(80px);
+  animation: ambientBreath 8s ease-in-out infinite alternate;
+}
+
+@keyframes ambientBreath {
+  0% { transform: scale(1); opacity: 0.7; }
+  100% { transform: scale(1.08); opacity: 0.95; }
+}
+
+/* Main Foreground Video Layer */
+.foregroundVideoWrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foregroundVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Cinematic Vignette and Dark Gradient Overlays */
+.cinematicVignette {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(4, 8, 20, 0.3) 0%,
+    rgba(4, 8, 20, 0.7) 60%,
+    rgba(4, 8, 20, 0.96) 100%
+  );
+}
+
+.cinematicGradTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 220px;
+  z-index: 4;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(4, 8, 20, 0.9) 0%, transparent 100%);
+}
+
+.cinematicGradBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 260px;
+  z-index: 4;
+  pointer-events: none;
+  background: linear-gradient(to top, #040814 0%, rgba(4, 8, 20, 0.8) 45%, transparent 100%);
+}
+
+/* Content Hero Overlay */
+.contentWrapper {
+  position: relative;
+  z-index: 15;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.taglineBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1rem;
+  border-radius: 9999px;
+  background: rgba(0, 143, 211, 0.15);
+  border: 1px solid rgba(0, 196, 255, 0.35);
+  box-shadow: 0 0 20px rgba(0, 143, 211, 0.25);
+  color: #38bdf8;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.8rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.titleLine1 {
+  background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.titleLine2 {
+  background: linear-gradient(135deg, #00c4ff 0%, #008fd3 50%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroSubtitle {
+  max-width: 760px;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.heroSubtitle strong {
+  color: #f8fafc;
+  font-weight: 600;
+}
+
+/* Metric Strip */
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 900px;
+  margin-top: 0.5rem;
+}
+
+.metricCard {
+  background: rgba(10, 22, 54, 0.6);
+  border: 1px solid rgba(0, 196, 255, 0.18);
+  border-radius: 14px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  backdrop-filter: blur(12px);
+  transition: all 0.25s ease;
+}
+
+.metricCard:hover {
+  border-color: rgba(0, 196, 255, 0.45);
+  transform: translateY(-2px);
+  background: rgba(10, 22, 54, 0.85);
+}
+
+.metricNumber {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00c4ff;
+}
+
+.metricLabel {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Action Button Group */
+.ctaGroup {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.primaryCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #008fd3 0%, #0070ba 100%);
+  border: 1px solid rgba(0, 196, 255, 0.5);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 20px rgba(0, 143, 211, 0.4);
+}
+
+.primaryCta:hover {
+  background: linear-gradient(135deg, #00a4f4 0%, #008fd3 100%);
+  box-shadow: 0 6px 28px rgba(0, 196, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.secondaryCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #f8fafc;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(10px);
+}
+
+.secondaryCta:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(0, 196, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Voice Studio Controls */
+.voiceStudioBar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(4, 12, 32, 0.7);
+  border: 1px solid rgba(0, 196, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  width: fit-content;
+  backdrop-filter: blur(16px);
+  margin-top: 0.5rem;
+}
+
+.voiceLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #38bdf8;
+  text-transform: uppercase;
+}
+
+.trackPill {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.trackPill:hover {
+  color: #fff;
+  border-color: rgba(0, 196, 255, 0.35);
+}
+
+.trackPillActive {
+  background: rgba(0, 143, 211, 0.25);
+  border-color: #00c4ff;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(0, 196, 255, 0.3);
+}
+
+.mediaControls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mediaBtn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mediaBtn:hover {
+  background: rgba(0, 143, 211, 0.3);
+  border-color: #00c4ff;
+}
+
+@media (max-width: 900px) {
+  .contentWrapper {
+    padding: 0 2rem;
+  }
+  .metricsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .voiceStudioBar {
+    flex-wrap: wrap;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contentWrapper {
+    padding: 0 1.25rem;
+  }
+  .metricsGrid {
+    grid-template-columns: 1fr;
+  }
+}

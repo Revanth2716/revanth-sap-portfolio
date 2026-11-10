@@ -1,0 +1,180 @@
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 6rem auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 20;
+}
+
+.header {
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #ef4444;
+  margin-bottom: 0.8rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+  margin-bottom: 0.85rem;
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  max-width: 760px;
+  line-height: 1.6;
+}
+
+.card {
+  background: rgba(8, 16, 40, 0.75);
+  border: 1px solid rgba(0, 196, 255, 0.2);
+  border-radius: 20px;
+  padding: 2.2rem;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.matrixGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.hierarchyBox {
+  background: rgba(4, 10, 26, 0.8);
+  border: 1px solid rgba(0, 196, 255, 0.15);
+  border-radius: 14px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.boxTitle {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.userCard {
+  background: rgba(0, 143, 211, 0.12);
+  border: 1px solid rgba(0, 196, 255, 0.3);
+  border-radius: 10px;
+  padding: 0.9rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.roleTree {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding-left: 1rem;
+  border-left: 2px dashed rgba(0, 196, 255, 0.3);
+  margin-left: 1rem;
+}
+
+.compositeRoleCard {
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.singleRoleGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  margin-top: 0.4rem;
+}
+
+.singleRoleCard {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.conflictAlertCard {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  border-radius: 14px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.alertHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #f87171;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.violationList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.violationItem {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: 8px;
+  padding: 0.85rem;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.remediationBox {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  border-radius: 8px;
+  padding: 0.9rem;
+  font-size: 0.82rem;
+  color: #34d399;
+}
+
+@media (max-width: 860px) {
+  .matrixGrid {
+    grid-template-columns: 1fr;
+  }
+}

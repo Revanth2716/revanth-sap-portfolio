@@ -1,0 +1,120 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 250;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 12vh;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.paletteWindow {
+  width: 640px;
+  max-width: calc(100vw - 2rem);
+  background: rgba(6, 14, 34, 0.96);
+  border: 1px solid rgba(0, 196, 255, 0.3);
+  border-radius: 18px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9), 0 0 32px rgba(0, 143, 211, 0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: slideDown 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1.2rem 1.4rem;
+  border-bottom: 1px solid rgba(0, 196, 255, 0.15);
+}
+
+.searchIcon {
+  color: #00c4ff;
+}
+
+.searchInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-family: var(--font-main);
+}
+
+.searchInput::placeholder {
+  color: var(--text-muted);
+}
+
+.resultsList {
+  max-height: 380px;
+  overflow-y: auto;
+  padding: 0.5rem 0;
+}
+
+.actionItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.4rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  color: #cbd5e1;
+}
+
+.actionItem:hover,
+.selectedAction {
+  background: rgba(0, 143, 211, 0.2);
+  color: #ffffff;
+}
+
+.actionLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.actionBadge {
+  font-size: 0.7rem;
+  font-family: monospace;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #38bdf8;
+}
+
+.footerBar {
+  background: #030814;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.6rem 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: monospace;
+}

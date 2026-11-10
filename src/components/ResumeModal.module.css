@@ -1,0 +1,210 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.modalWindow {
+  width: 860px;
+  max-width: 100%;
+  max-height: 90vh;
+  background: #ffffff;
+  color: #0f172a;
+  border-radius: 16px;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.topBar {
+  background: #061026;
+  color: #ffffff;
+  padding: 0.9rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 196, 255, 0.2);
+}
+
+.topTitle {
+  font-size: 0.88rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.topActions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.printBtn {
+  background: linear-gradient(135deg, #008fd3, #0284c7);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s ease;
+}
+
+.printBtn:hover {
+  background: linear-gradient(135deg, #0284c7, #00c4ff);
+}
+
+.copyBtn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s ease;
+}
+
+.copyBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.closeBtn:hover {
+  color: #ffffff;
+}
+
+.resumeBody {
+  padding: 2.5rem 3rem;
+  overflow-y: auto;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #1e293b;
+}
+
+.nameHeader {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.name {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+
+.targetRole {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0070ba;
+  margin-bottom: 0.4rem;
+}
+
+.contactLine {
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.contactLine a {
+  color: #0070ba;
+  text-decoration: none;
+}
+
+.section {
+  margin-bottom: 1.4rem;
+}
+
+.secTitle {
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0f172a;
+  border-bottom: 1.5px solid #0070ba;
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.jobItem {
+  margin-bottom: 0.9rem;
+}
+
+.jobHeader {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+.jobSub {
+  font-size: 0.85rem;
+  color: #475569;
+  font-style: italic;
+  margin-bottom: 0.4rem;
+}
+
+.bullets {
+  padding-left: 1.2rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.bullets li {
+  font-size: 0.88rem;
+  color: #334155;
+  line-height: 1.45;
+}
+
+@media print {
+  .topBar {
+    display: none !important;
+  }
+  .backdrop {
+    position: static !important;
+    background: transparent !important;
+    padding: 0 !important;
+  }
+  .modalWindow {
+    box-shadow: none !important;
+    max-height: none !important;
+    width: 100% !important;
+  }
+  .resumeBody {
+    padding: 0 !important;
+  }
+}

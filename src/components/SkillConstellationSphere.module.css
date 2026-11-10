@@ -1,0 +1,85 @@
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 6rem auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 20;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #00c4ff;
+  margin-bottom: 0.8rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+  margin-bottom: 0.85rem;
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.sphereWrapper {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  background: radial-gradient(circle at 50% 50%, rgba(8, 20, 52, 0.7) 0%, rgba(3, 8, 20, 0.95) 100%);
+  border: 1px solid rgba(0, 196, 255, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sphereCanvas {
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+
+.sphereCanvas:active {
+  cursor: grabbing;
+}
+
+.activeSkillPill {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(4, 12, 32, 0.85);
+  border: 1px solid rgba(0, 196, 255, 0.35);
+  border-radius: 9999px;
+  padding: 0.5rem 1.4rem;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #38bdf8;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(0, 143, 211, 0.3);
+  pointer-events: none;
+}

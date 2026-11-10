@@ -1,0 +1,136 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.modalWindow {
+  width: 900px;
+  max-width: 100%;
+  background: #060e22;
+  border: 1px solid rgba(0, 196, 255, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 143, 211, 0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.topBar {
+  background: #091636;
+  border-bottom: 1px solid rgba(0, 196, 255, 0.2);
+  padding: 1rem 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.deckTitle {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.slideIndex {
+  font-size: 0.78rem;
+  font-family: monospace;
+  background: rgba(0, 143, 211, 0.2);
+  border: 1px solid rgba(0, 196, 255, 0.3);
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  color: #38bdf8;
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeBtn:hover {
+  color: #fff;
+}
+
+.slideContent {
+  padding: 2.5rem 3rem;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.slideHeading {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.highlightBanner {
+  background: rgba(0, 143, 211, 0.15);
+  border-left: 4px solid #00c4ff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #38bdf8;
+}
+
+.pointsList {
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: 0.92rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.bottomNav {
+  background: #040916;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1rem 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.navBtn:hover:not(:disabled) {
+  background: rgba(0, 143, 211, 0.3);
+  border-color: #00c4ff;
+}
+
+.navBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}

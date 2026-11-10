@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: #040814;
+  --bg-secondary: #081026;
+  --bg-card: rgba(10, 20, 48, 0.72);
+  --border-subtle: rgba(56, 189, 248, 0.14);
+  --border-glow: rgba(0, 143, 211, 0.4);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --accent-sap: #008fd3;
+  --accent-sap-glow: rgba(0, 143, 211, 0.45);
+  --accent-cyan: #00c4ff;
+  --accent-cyan-glow: rgba(0, 196, 255, 0.4);
+  --accent-gold: #f59e0b;
+  --accent-amber: #f59e0b;
+  --accent-amber-glow: rgba(245, 158, 11, 0.45);
+  --accent-green: #10b981;
+  --accent-red: #ef4444;
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+::selection {
+  background: rgba(0, 143, 211, 0.4);
+  color: #ffffff;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #040814;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 196, 255, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 143, 211, 0.5);
+}
+
+/* Ambient Cyber Grid Scanlines */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(
+    rgba(0, 196, 255, 0.02) 1px,
+    transparent 1px
+  ),
+  linear-gradient(90deg, rgba(0, 196, 255, 0.02) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Technical SAP Architecture Blueprint Mode */
+body.blueprintMode {
+  --bg-primary: #030d1c;
+  --bg-secondary: #061730;
+  --border-subtle: rgba(0, 196, 255, 0.28);
+  --border-glow: rgba(0, 196, 255, 0.55);
+  --accent-sap: #38bdf8;
+  --accent-sap-glow: rgba(56, 189, 248, 0.5);
+  background-image: linear-gradient(rgba(0, 196, 255, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 196, 255, 0.09) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Print CSS */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  div[class*="ResumeModal_backdrop"],
+  div[class*="ResumeModal_backdrop"] * {
+    visibility: visible;
+  }
+  div[class*="ResumeModal_backdrop"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent !important;
+  }
+}

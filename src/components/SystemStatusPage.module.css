@@ -1,0 +1,126 @@
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 6rem auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 20;
+}
+
+.header {
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #10b981;
+  margin-bottom: 0.8rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+  margin-bottom: 0.85rem;
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  max-width: 760px;
+  line-height: 1.6;
+}
+
+.card {
+  background: rgba(8, 16, 40, 0.75);
+  border: 1px solid rgba(0, 196, 255, 0.2);
+  border-radius: 20px;
+  padding: 2.2rem;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.systemRow {
+  background: rgba(4, 10, 26, 0.85);
+  border: 1px solid rgba(0, 196, 255, 0.15);
+  border-radius: 12px;
+  padding: 1.25rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.rowHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.systemName {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.slaBadge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #34d399;
+}
+
+.barStrip {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  width: 100%;
+  height: 24px;
+}
+
+.dayBar {
+  flex: 1;
+  height: 100%;
+  border-radius: 2px;
+  background: #10b981;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.dayBar:hover {
+  opacity: 1;
+  transform: scaleY(1.15);
+}
+
+.dayBarWarning {
+  background: #fbbf24;
+}
+
+.dayBarDowntime {
+  background: #f87171;
+}
+
+.stripFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}

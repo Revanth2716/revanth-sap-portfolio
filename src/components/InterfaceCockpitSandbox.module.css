@@ -1,0 +1,126 @@
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 6rem auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 20;
+}
+
+.header {
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #38bdf8;
+  margin-bottom: 0.8rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+  margin-bottom: 0.85rem;
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  max-width: 760px;
+  line-height: 1.6;
+}
+
+.card {
+  background: rgba(8, 16, 40, 0.75);
+  border: 1px solid rgba(0, 196, 255, 0.2);
+  border-radius: 20px;
+  padding: 2.2rem;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid rgba(0, 196, 255, 0.15);
+  border-radius: 12px;
+  background: rgba(4, 10, 26, 0.85);
+}
+
+.interfaceTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+  text-align: left;
+}
+
+.interfaceTable th {
+  background: rgba(0, 143, 211, 0.15);
+  color: #38bdf8;
+  font-family: var(--font-display);
+  font-weight: 600;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid rgba(0, 196, 255, 0.2);
+  white-space: nowrap;
+}
+
+.interfaceTable td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+}
+
+.statusFailed {
+  color: #f87171;
+  font-weight: 600;
+}
+
+.statusOk {
+  color: #34d399;
+  font-weight: 600;
+}
+
+.triageCard {
+  background: rgba(0, 143, 211, 0.08);
+  border: 1px solid rgba(0, 196, 255, 0.25);
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.replayBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #008fd3 0%, #0070ba 100%);
+  border: 1px solid rgba(0, 196, 255, 0.5);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.replayBtn:hover {
+  box-shadow: 0 0 20px rgba(0, 196, 255, 0.5);
+}

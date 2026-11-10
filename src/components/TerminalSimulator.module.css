@@ -1,0 +1,162 @@
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 6rem auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 20;
+}
+
+.header {
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #38bdf8;
+  margin-bottom: 0.8rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+  margin-bottom: 0.85rem;
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  max-width: 760px;
+  line-height: 1.6;
+}
+
+.terminalCard {
+  background: #030814;
+  border: 1px solid rgba(0, 196, 255, 0.25);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.8), 0 0 24px rgba(0, 143, 211, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.terminalHeader {
+  background: #081432;
+  border-bottom: 1px solid rgba(0, 196, 255, 0.2);
+  padding: 0.8rem 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dotsGroup {
+  display: flex;
+  gap: 6px;
+}
+
+.macDot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.dotRed { background: #ef4444; }
+.dotYellow { background: #f59e0b; }
+.dotGreen { background: #10b981; }
+
+.terminalTitle {
+  font-family: 'SF Mono', Monaco, monospace;
+  font-size: 0.82rem;
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.terminalBody {
+  padding: 1.5rem;
+  min-height: 320px;
+  max-height: 480px;
+  overflow-y: auto;
+  font-family: 'SF Mono', Monaco, Consolas, monospace;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+.greetingText {
+  color: #38bdf8;
+  margin-bottom: 1.2rem;
+  white-space: pre-wrap;
+}
+
+.historyItem {
+  margin-bottom: 1rem;
+}
+
+.commandPrompt {
+  color: #00c4ff;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.3rem;
+}
+
+.commandOutput {
+  color: #e2e8f0;
+  white-space: pre-wrap;
+  padding-left: 1.2rem;
+}
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.cliInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.quickCommandsBar {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0.8rem 1.4rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.quickBtn {
+  background: rgba(0, 143, 211, 0.12);
+  border: 1px solid rgba(0, 196, 255, 0.25);
+  color: #38bdf8;
+  font-family: monospace;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quickBtn:hover {
+  background: rgba(0, 143, 211, 0.25);
+  color: #fff;
+  border-color: #00c4ff;
+}

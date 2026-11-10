@@ -1,0 +1,181 @@
+.container {
+  padding: 6rem 2rem;
+  max-width: 1240px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 9999px;
+  background: rgba(0, 143, 211, 0.15);
+  border: 1px solid rgba(0, 196, 255, 0.35);
+  color: #38bdf8;
+  font-size: 0.78rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.description {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.card {
+  background: rgba(8, 16, 40, 0.75);
+  border: 1px solid rgba(0, 196, 255, 0.18);
+  border-radius: 20px;
+  padding: 2.2rem;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6);
+}
+
+.controlsBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.trackButtons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.trackBtn {
+  padding: 0.5rem 1.1rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.trackBtn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border-color: rgba(0, 196, 255, 0.35);
+}
+
+.activeTrack {
+  background: rgba(0, 143, 211, 0.2);
+  border-color: #00c4ff;
+  color: #fff;
+  box-shadow: 0 0 16px rgba(0, 196, 255, 0.25);
+}
+
+.playbackGroup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.playBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #008fd3 0%, #0070ba 100%);
+  border: 1px solid rgba(0, 196, 255, 0.5);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.playBtn:hover {
+  box-shadow: 0 0 20px rgba(0, 196, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+.teleprompterBox {
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.wordStream {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem 0.6rem;
+  max-width: 900px;
+}
+
+.word {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.3);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 0.1rem 0.25rem;
+  border-radius: 6px;
+}
+
+.activeWord {
+  color: #ffffff;
+  background: rgba(0, 196, 255, 0.2);
+  text-shadow: 0 0 20px rgba(0, 196, 255, 0.8);
+  transform: scale(1.08);
+}
+
+.spokenWord {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.spectrumBar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 3px;
+  height: 48px;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.freqBar {
+  width: 4px;
+  background: linear-gradient(to top, #008fd3, #00c4ff);
+  border-radius: 2px;
+  transition: height 0.08s ease;
+  min-height: 4px;
+}

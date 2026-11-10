@@ -1,0 +1,186 @@
+.nav {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(94%, 1280px);
+  height: 64px;
+  background: rgba(4, 12, 28, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 196, 255, 0.18);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.nav:hover {
+  border-color: rgba(0, 196, 255, 0.35);
+  box-shadow: 0 12px 40px rgba(0, 143, 211, 0.25);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.brandTitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.sidBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0, 143, 211, 0.15);
+  border: 1px solid rgba(0, 196, 255, 0.3);
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #38bdf8;
+  letter-spacing: 0.4px;
+}
+
+.statusDot {
+  width: 7px;
+  height: 7px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #10b981;
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  list-style: none;
+}
+
+.link {
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.iconBtn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-secondary);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.iconBtn:hover {
+  color: #fff;
+  background: rgba(0, 143, 211, 0.2);
+  border-color: rgba(0, 196, 255, 0.4);
+}
+
+.pitchBtn {
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: #fbbf24;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.pitchBtn:hover {
+  background: rgba(245, 158, 11, 0.3);
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.4);
+}
+
+.resumeBtn {
+  background: linear-gradient(135deg, #008fd3, #0284c7);
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  color: #ffffff;
+  padding: 7px 16px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 143, 211, 0.35);
+}
+
+.resumeBtn:hover {
+  background: linear-gradient(135deg, #0284c7, #00c4ff);
+  box-shadow: 0 6px 20px rgba(0, 196, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+.cmdK {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-muted);
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-family: monospace;
+}
+
+@media (max-width: 1080px) {
+  .links {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .sidBadge {
+    display: none;
+  }
+  .pitchBtn {
+    display: none;
+  }
+}

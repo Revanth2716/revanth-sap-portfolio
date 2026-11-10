@@ -1,0 +1,228 @@
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 6rem auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 20;
+}
+
+.header {
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #f59e0b;
+  margin-bottom: 0.8rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+  margin-bottom: 0.85rem;
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  max-width: 760px;
+  line-height: 1.6;
+}
+
+.card {
+  background: rgba(8, 18, 46, 0.75);
+  border: 1px solid rgba(0, 196, 255, 0.2);
+  border-radius: 20px;
+  padding: 2.2rem;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.timelineBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.timelineBar::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  background: rgba(0, 196, 255, 0.2);
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.timelineStep {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  min-width: 120px;
+}
+
+.stepCircle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #040814;
+  border: 2px solid rgba(0, 196, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+}
+
+.activeStep .stepCircle {
+  background: #008fd3;
+  border-color: #00c4ff;
+  color: #fff;
+  box-shadow: 0 0 16px rgba(0, 196, 255, 0.6);
+  transform: scale(1.15);
+}
+
+.completedStep .stepCircle {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: #10b981;
+  color: #10b981;
+}
+
+.stepLabel {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.activeStep .stepLabel {
+  color: #38bdf8;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.detailBox {
+  background: rgba(4, 10, 26, 0.85);
+  border: 1px solid rgba(0, 196, 255, 0.15);
+  border-radius: 14px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.boxHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.boxTitle {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.boxDesc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.codePanel {
+  background: #020610;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1rem;
+  font-family: 'SF Mono', Monaco, monospace;
+  font-size: 0.8rem;
+  color: #38bdf8;
+  overflow-x: auto;
+}
+
+.rcButtons {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.rcBtn {
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.rc0 { background: rgba(16, 185, 129, 0.15); color: #10b981; border-color: rgba(16, 185, 129, 0.4); }
+.rc4 { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.4); }
+.rc8 { background: rgba(239, 68, 68, 0.15); color: #f87171; border-color: rgba(239, 68, 68, 0.4); }
+.rc12 { background: rgba(168, 85, 247, 0.15); color: #c084fc; border-color: rgba(168, 85, 247, 0.4); }
+
+.rcBtn:hover {
+  transform: translateY(-1px);
+}
+
+.activeRc {
+  box-shadow: 0 0 14px currentColor;
+  transform: scale(1.05);
+}
+
+.checklistOutput {
+  background: #020610;
+  border: 1px solid rgba(0, 196, 255, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+  font-family: monospace;
+  font-size: 0.78rem;
+  color: #cbd5e1;
+  white-space: pre-wrap;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+@media (max-width: 860px) {
+  .detailsGrid {
+    grid-template-columns: 1fr;
+  }
+}
