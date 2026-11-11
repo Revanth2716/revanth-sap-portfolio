@@ -147,8 +147,9 @@ export default function TerminalSimulator() {
   3. sap-custom-code-analyzer    - Where-used & clean core analyzer (Java 8, 61 tests)
   4. sap-interface-cockpit       - RFC, IDoc & BAPI monitoring (Java 8, 50 tests)
   5. sap-performance-analyzer    - ST12 / ST03 trace analyzer (Java 8, 38 tests)
-  6. sap-backup-readiness        - Continuity & DR readiness (Java 8, 53 tests)
-  Total: 295 Automated Tests Passing.`;
+  6. sap-backup-readiness        - Continuity & DR readiness (Java 8, 54 tests)
+  7. sap-transport-analyzer      - Object conflicts & release train (Java 8, 65 tests)
+  Total: 361 Automated Tests Passing.`;
         break;
 
       case 'certs':

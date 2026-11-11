@@ -37,7 +37,7 @@ const SECTIONS = [
   { id: 'tms-simulator', label: 'TMS Simulator', icon: GitBranch },
   { id: 'sod-matrix', label: 'SoD Matrix', icon: ShieldCheck },
   { id: 'trace-lab', label: 'ST12 Trace Lab', icon: Activity },
-  { id: 'unit-tests', label: 'Tests (295)', icon: CheckCircle2 },
+  { id: 'unit-tests', label: 'Tests (361)', icon: CheckCircle2 },
   { id: 'terminal', label: 'SAPSH CLI', icon: Terminal },
   { id: 'credentials', label: 'Experience', icon: Award },
   { id: 'contact', label: 'Contact', icon: Mail },

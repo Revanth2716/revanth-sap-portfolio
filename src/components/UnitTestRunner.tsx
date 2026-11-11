@@ -89,12 +89,26 @@ const SUITES: TestSuite[] = [
     id: 'backup-readiness',
     name: 'sap-backup-readiness',
     repo: 'Continuity & DR Readiness',
-    testCount: 53,
+    testCount: 54,
     framework: 'Java 8 · JUnit 5',
     sampleTests: [
       { name: 'testRpoEvaluation_BackupAgeBreached_ReturnsFalse', expected: 'PASS (RPO violation alert)', durationMs: 0.18 },
       { name: 'testRestoreEvidence_AuditAgeExceeds90Days', expected: 'PASS (Flagged for CAB audit)', durationMs: 0.21 },
       { name: 'testCapacityForecaster_CalculatesDaysToThreshold', expected: 'PASS (Linear regression accurate)', durationMs: 0.15 },
+    ],
+  },
+  {
+    id: 'transport-analyzer',
+    name: 'sap-transport-analyzer',
+    repo: 'Change, Transport & Release Train',
+    testCount: 65,
+    framework: 'Java 8 · JUnit 5',
+    sampleTests: [
+      { name: 'objectInTwoOpenRequestsIsAConflict', expected: 'PASS (ZCL_PAYMENT flagged in K900001 + K900002)', durationMs: 0.17 },
+      { name: 'dependencyInTheWrongSystemStillBlocks', expected: 'PASS (QA import does not unblock PRD)', durationMs: 0.24 },
+      { name: 'severityIsTheWorstFindingNotTheScoreBand', expected: 'PASS (failed import stays CRITICAL at 65)', durationMs: 0.13 },
+      { name: 'modifiedAfterImportIsAFinding', expected: 'PASS (hotfix never transported flagged)', durationMs: 0.21 },
+      { name: 'prdTrainHasOneReadyRequest', expected: 'PASS (1 ready, 3 blocked, 1 unfinished)', durationMs: 0.33 },
     ],
   },
 ];
@@ -124,7 +138,7 @@ export default function UnitTestRunner() {
           <CheckCircle2 size={14} />
           <span>Automated Quality Gates</span>
         </div>
-        <h2 className={styles.title}>In-Browser Test Runner (295 Automated Tests)</h2>
+        <h2 className={styles.title}>In-Browser Test Runner (361 Automated Tests)</h2>
         <p className={styles.description}>
           Every repository is backed by automated JUnit 5 and pytest suites. No mocked claims or
           hand-waving: run and inspect unit test executions verifying business logic, RFC adapters, and

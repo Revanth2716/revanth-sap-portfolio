@@ -20,7 +20,7 @@ export interface SapProject {
   id: string;
   title: string;
   category: string;
-  domain: 'all' | 'basis' | 'integration' | 'performance' | 'continuity' | 'clean-core';
+  domain: 'all' | 'basis' | 'integration' | 'performance' | 'continuity' | 'clean-core' | 'transport';
   description: string;
   testsBadge: string;
   tags: string[];
@@ -96,10 +96,22 @@ export const SAP_PROJECTS: SapProject[] = [
     domain: 'continuity',
     description:
       'Continuity operations for SAP landscapes: backup freshness verification against the signed RPO, restore test evidence auditing, HANA data and log volume capacity forecasting, and per-system readiness scoring.',
-    testsBadge: '53 Tests Passing (JUnit 5)',
+    testsBadge: '54 Tests Passing (JUnit 5)',
     tags: ['Java 8', 'Spring Boot', 'RPO Lag Calculator', 'HANA Backup Catalog', 'Restore Evidence', 'DR'],
     githubUrl: 'https://github.com/Revanth2716/sap-backup-readiness',
     image: '/screenshots/readiness-dashboard.png',
+  },
+  {
+    id: 'transport-analyzer',
+    title: 'SAP Transport & Change Management Analyzer',
+    category: 'Change, Transport & Release Management',
+    domain: 'transport',
+    description:
+      'Change and transport management for SAP landscapes: object conflict detection across open transport requests — the case where two requests carry the same object and the second import silently overwrites the first — dependency chains resolved against the target system, import evidence verification, objects changed after the last transport, and a release train per target system with a generated import checklist.',
+    testsBadge: '65 Tests Passing (JUnit 5)',
+    tags: ['Java 8', 'Spring Boot', 'SE09 / STMS', 'Object Conflicts', 'Dependency Chains', 'Release Train'],
+    githubUrl: 'https://github.com/Revanth2716/sap-transport-analyzer',
+    image: '/screenshots/transport-dashboard.png',
   },
 ];
 
@@ -142,7 +154,7 @@ export default function PortfolioSections({ onInspectProject }: PortfolioSection
           className={`${styles.filterBtn} ${activeFilter === 'all' ? styles.filterBtnActive : ''}`}
           onClick={() => handleFilterClick('all')}
         >
-          All Systems (6)
+          All Systems (7)
         </button>
         <button
           className={`${styles.filterBtn} ${
@@ -183,6 +195,14 @@ export default function PortfolioSections({ onInspectProject }: PortfolioSection
           onClick={() => handleFilterClick('clean-core')}
         >
           Clean Core & S/4HANA (1)
+        </button>
+        <button
+          className={`${styles.filterBtn} ${
+            activeFilter === 'transport' ? styles.filterBtnActive : ''
+          }`}
+          onClick={() => handleFilterClick('transport')}
+        >
+          Change & Transport (1)
         </button>
       </div>
 
