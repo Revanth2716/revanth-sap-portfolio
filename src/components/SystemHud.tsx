@@ -55,7 +55,7 @@ export default function SystemHud() {
           <span>HANA In-Memory: ONLINE</span>
         </div>
         <div className={styles.hudItem}>
-          <span>Tests: 361/361 PASS</span>
+          <span>Tests: 417/417 PASS</span>
         </div>
       </div>
 

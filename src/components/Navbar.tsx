@@ -88,7 +88,7 @@ export default function Navbar({ onOpenResume, onOpenPitchDeck }: NavbarProps) {
           </li>
           <li>
             <a href="#unit-tests" className={styles.link} onClick={() => playUiClick()}>
-              Tests (361)
+              Tests (417)
             </a>
           </li>
           <li>

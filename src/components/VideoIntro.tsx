@@ -226,8 +226,8 @@ export default function VideoIntro({ onExploreClick, onOpenResume }: VideoIntroP
           <strong>SAP NetWeaver 7.5 dual-stack architecture</strong>, transport management (
           <code>SE09/STMS</code>), background job health (<code>SM37</code>), role & authorization
           governance (<code>SU01/PFCG</code>), and cross-stack integration with RFC and SAP JCo.
-          Author of <strong>7 published SAP repositories</strong> backed by{' '}
-          <strong>361 automated tests</strong>.
+          Author of <strong>8 published SAP repositories</strong> backed by{' '}
+          <strong>417 automated tests</strong>.
         </p>
 
         {/* Real Metrics Grid */}
@@ -237,7 +237,7 @@ export default function VideoIntro({ onExploreClick, onOpenResume }: VideoIntroP
             <span className={styles.metricLabel}>Published SAP Repositories</span>
           </div>
           <div className={styles.metricCard}>
-            <span className={styles.metricNumber}>361</span>
+            <span className={styles.metricNumber}>417</span>
             <span className={styles.metricLabel}>Automated Unit/Integration Tests</span>
           </div>
           <div className={styles.metricCard}>

@@ -28,7 +28,7 @@ export default function CompanyPitchGenerator() {
 
 I am writing to express my strong enthusiasm for Entry-Level SAP BASIS Analyst roles within ${clean}. As a Computer Science graduate from KL University (8.33 / 10 CGPA) with an eight-month SAP BASIS internship completed at Eezycode Software Private Limited, I have developed solid foundational expertise in SAP NetWeaver 7.5 dual-stack architecture (AS ABAP & AS Java), transport management (SE09/STMS), background job health (SM37), and role administration (SU01/PFCG).
 
-To build real-world capability beyond classroom theory, I have authored and published seven open-source SAP repositories (github.com/Revanth2716) backed by 361 automated tests. These systems directly tackle day-to-day BASIS responsibilities:
+To build real-world capability beyond classroom theory, I have authored and published eight open-source SAP repositories (github.com/Revanth2716) backed by 417 automated tests. These systems directly tackle day-to-day BASIS responsibilities:
 - An integrated NetWeaver Operations Portal connecting Java/JSP to SAP via RFC (JCo) and RFC-enabled ABAP function modules.
 - A Change and Transport System (TMS) tracking engine that queries transport tables directly and automates release checklists.
 - A Segregation-of-Duties (SoD) audit engine performing recursive composite-role expansion and conflict scoring.
@@ -62,7 +62,7 @@ yarramsettirevanth27@gmail.com | +91 9959429448 | linkedin.com/in/revanthyarrams
         <h2 className={styles.title}>Company-Tailored SAP Engineering Pitch Generator</h2>
         <p className={styles.description}>
           Select a top enterprise SAP employer or type your organization. Synthesize a tailored cover
-          letter highlighting my NetWeaver 7.5 experience, Eezycode internship, and 7 published
+          letter highlighting my NetWeaver 7.5 experience, Eezycode internship, and 8 published
           repositories.
         </p>
       </div>

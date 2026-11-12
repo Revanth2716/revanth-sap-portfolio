@@ -111,6 +111,20 @@ const SUITES: TestSuite[] = [
       { name: 'prdTrainHasOneReadyRequest', expected: 'PASS (1 ready, 3 blocked, 1 unfinished)', durationMs: 0.33 },
     ],
   },
+  {
+    id: 'upgrade-readiness',
+    name: 'sap-upgrade-readiness',
+    repo: 'Upgrades, Obsolete Components & Compatibility',
+    testCount: 56,
+    framework: 'Java 8 · JUnit 5',
+    sampleTests: [
+      { name: 'obsoleteComponentBlocksTheUpgrade', expected: 'PASS (SAP_MDM flagged as a blocker)', durationMs: 0.19 },
+      { name: 'dependencyAheadIsBroken', expected: 'PASS (SAP_HANA ahead of SAP_BASIS caught)', durationMs: 0.23 },
+      { name: 'componentBehindItsOwnSystemIsAFinding', expected: 'PASS (SAP_HANA level 3 on a level 5 system)', durationMs: 0.16 },
+      { name: 'severityIsTheWorstFindingNotTheScoreBand', expected: 'PASS (obsolete stays CRITICAL at 45)', durationMs: 0.14 },
+      { name: 'theBreakingChangesCanBePulledOut', expected: 'PASS (4 incompatible changes isolated)', durationMs: 0.26 },
+    ],
+  },
 ];
 
 export default function UnitTestRunner() {
@@ -138,7 +152,7 @@ export default function UnitTestRunner() {
           <CheckCircle2 size={14} />
           <span>Automated Quality Gates</span>
         </div>
-        <h2 className={styles.title}>In-Browser Test Runner (361 Automated Tests)</h2>
+        <h2 className={styles.title}>In-Browser Test Runner (417 Automated Tests)</h2>
         <p className={styles.description}>
           Every repository is backed by automated JUnit 5 and pytest suites. No mocked claims or
           hand-waving: run and inspect unit test executions verifying business logic, RFC adapters, and

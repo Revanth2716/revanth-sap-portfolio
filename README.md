@@ -5,7 +5,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue?logo=typescript)](https://www.typescriptlang.org/)
 [![Three.js](https://img.shields.io/badge/Three.js-WebGL-black?logo=three.js)](https://threejs.org/)
 [![SAP](https://img.shields.io/badge/SAP-NetWeaver%207.52-008FD3)](https://www.sap.com)
-[![Tests](https://img.shields.io/badge/tests-361%20passing-brightgreen)](https://github.com/Revanth2716)
+[![Tests](https://img.shields.io/badge/tests-417%20passing-brightgreen)](https://github.com/Revanth2716)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 An Apple-grade, high-performance cinematic developer portfolio and enterprise systems showcase for **Yarramsetti Revanth**, Entry-Level SAP BASIS Analyst. Built with **Next.js 15 App Router**, **Three.js WebGL**, **GSAP**, **Pure CSS Modules**, and **Web Audio API**.
@@ -32,7 +32,7 @@ An Apple-grade, high-performance cinematic developer portfolio and enterprise sy
 * **Landscape Health & 90-Day SLA Uptime**: Real-time status for DEV (`NPL`), QAS (`NPQ`), PRD (`NPP`), SOL, and BW.
 
 ### 3. 💼 Recruiter Experience & Developer Tools
-* **In-Browser Test Runner**: Executes all **361 automated tests** across the 7 published SAP repositories (pytest and JUnit 5).
+* **In-Browser Test Runner**: Executes all **417 automated tests** across the 8 published SAP repositories (pytest and JUnit 5).
 * **Interactive SAP Terminal CLI (`SAPSH`)**: Direct transaction code emulator executing `tcode se09`, `tcode sm37`, `tcode su01`, `tcode su53`, `tcode st22`, `tcode st03`, `status`, and `projects`.
 * **Company-Tailored SAP Pitch Generator**: Synthesizes custom architectural cover letters for Deloitte, Accenture, Capgemini, PwC, EY, Infosys, Wipro, TCS, SAP Labs, and IBM.
 * **1-Click ATS Printable Resume Modal**: Exact 1-to-1 matching modal with verified background, 1-click clipboard export, and print-ready A4 PDF styles.
@@ -42,7 +42,7 @@ An Apple-grade, high-performance cinematic developer portfolio and enterprise sy
 
 ---
 
-## 🛠️ The 7 Flagship Open-Source SAP Repositories
+## 🛠️ The 8 Flagship Open-Source SAP Repositories
 
 | # | Repository | Workstream | Stack | Tests |
 |---|---|---|---|---|
@@ -53,6 +53,7 @@ An Apple-grade, high-performance cinematic developer portfolio and enterprise sy
 | 5 | [`sap-performance-analyzer`](https://github.com/Revanth2716/sap-performance-analyzer) | Performance — ST12 / ST03 Trace | Java 8 · Spring Boot · NetWeaver 7.5 | 38 |
 | 6 | [`sap-backup-readiness`](https://github.com/Revanth2716/sap-backup-readiness) | Continuity & DR Readiness | Java 8 · Spring Boot · NetWeaver 7.5 | 54 |
 | 7 | [`sap-transport-analyzer`](https://github.com/Revanth2716/sap-transport-analyzer) | Change & Transport — Conflicts, Release Train | Java 8 · Spring Boot · NetWeaver 7.5 | 65 |
+| 8 | [`sap-upgrade-readiness`](https://github.com/Revanth2716/sap-upgrade-readiness) | Upgrades — Obsolete Components, Patch Drift | Java 8 · Spring Boot · NetWeaver 7.5 | 56 |
 
 ---
 

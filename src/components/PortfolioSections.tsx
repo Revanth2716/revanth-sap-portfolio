@@ -20,7 +20,7 @@ export interface SapProject {
   id: string;
   title: string;
   category: string;
-  domain: 'all' | 'basis' | 'integration' | 'performance' | 'continuity' | 'clean-core' | 'transport';
+  domain: 'all' | 'basis' | 'integration' | 'performance' | 'continuity' | 'clean-core' | 'transport' | 'upgrade';
   description: string;
   testsBadge: string;
   tags: string[];
@@ -113,6 +113,18 @@ export const SAP_PROJECTS: SapProject[] = [
     githubUrl: 'https://github.com/Revanth2716/sap-transport-analyzer',
     image: '/screenshots/transport-dashboard.png',
   },
+  {
+    id: 'upgrade-readiness',
+    title: 'SAP Upgrade & Support Package Readiness',
+    category: 'Upgrades, Obsolete Components & Compatibility',
+    domain: 'upgrade',
+    description:
+      'Upgrade readiness for SAP landscapes: obsolete components whose replaced product blocks an upgrade outright, component dependency consistency, patch level drift across the landscape, failed patches from the SPAM log, components left behind inside their own system, and a changelog viewer that isolates the incompatible changes a test team needs before a regression window opens.',
+    testsBadge: '56 Tests Passing (JUnit 5)',
+    tags: ['Java 8', 'Spring Boot', 'SPAM / SUM', 'Patch Levels', 'Obsolete Components', 'Incompatible Changes'],
+    githubUrl: 'https://github.com/Revanth2716/sap-upgrade-readiness',
+    image: '/screenshots/upgrade-readiness.png',
+  },
 ];
 
 interface PortfolioSectionsProps {
@@ -154,7 +166,7 @@ export default function PortfolioSections({ onInspectProject }: PortfolioSection
           className={`${styles.filterBtn} ${activeFilter === 'all' ? styles.filterBtnActive : ''}`}
           onClick={() => handleFilterClick('all')}
         >
-          All Systems (7)
+          All Systems (8)
         </button>
         <button
           className={`${styles.filterBtn} ${
@@ -203,6 +215,14 @@ export default function PortfolioSections({ onInspectProject }: PortfolioSection
           onClick={() => handleFilterClick('transport')}
         >
           Change & Transport (1)
+        </button>
+        <button
+          className={`${styles.filterBtn} ${
+            activeFilter === 'upgrade' ? styles.filterBtnActive : ''
+          }`}
+          onClick={() => handleFilterClick('upgrade')}
+        >
+          Upgrades & Compatibility (1)
         </button>
       </div>
 

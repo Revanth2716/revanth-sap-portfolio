@@ -30,8 +30,8 @@ const TRACKS: SpeechTrack[] = [
     transcript: [
       'My', 'core', 'engineering', 'focus', 'is', 'NetWeaver', '7.5', 'AS', 'ABAP', 'and', 'AS', 'Java',
       'integration,', 'RFC-enabled', 'function', 'modules,', 'SAP', 'Java', 'Connector', 'JCo,', 'HANA',
-      'SQL,', 'and', 'ST12', 'trace', 'diagnostics.', 'I', 'built', '7', 'open-source', 'SAP', 'repositories',
-      'with', '361', 'automated', 'tests.'
+      'SQL,', 'and', 'ST12', 'trace', 'diagnostics.', 'I', 'built', '8', 'open-source', 'SAP', 'repositories',
+      'with', '417', 'automated', 'tests.'
     ],
   },
   {
