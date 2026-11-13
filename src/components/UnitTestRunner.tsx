@@ -125,6 +125,20 @@ const SUITES: TestSuite[] = [
       { name: 'theBreakingChangesCanBePulledOut', expected: 'PASS (4 incompatible changes isolated)', durationMs: 0.26 },
     ],
   },
+  {
+    id: 'authorization-analyzer',
+    name: 'sap-authorization-analyzer',
+    repo: 'Authorisations, SoD Conflicts & Least Privilege',
+    testCount: 58,
+    framework: 'Java 8 · JUnit 5',
+    sampleTests: [
+      { name: 'holdingBothSidesIsAConflict', expected: 'PASS (ANIL.HR holds both payroll roles)', durationMs: 0.21 },
+      { name: 'compositeBundlesTheConflict', expected: 'PASS (ZABAP_ADMIN bundles SD02)', durationMs: 0.19 },
+      { name: 'differentValuesInTwoSystemsIsDrift', expected: 'PASS (company code 4000 missing in PRD)', durationMs: 0.24 },
+      { name: 'aHighSeverityRuleStillCostsSomething', expected: 'PASS (a finding that costs nothing is no finding)', durationMs: 0.15 },
+      { name: 'theBlastRadius', expected: 'PASS (3 exposed in production, 2 in conflict)', durationMs: 0.28 },
+    ],
+  },
 ];
 
 export default function UnitTestRunner() {
@@ -152,7 +166,7 @@ export default function UnitTestRunner() {
           <CheckCircle2 size={14} />
           <span>Automated Quality Gates</span>
         </div>
-        <h2 className={styles.title}>In-Browser Test Runner (417 Automated Tests)</h2>
+        <h2 className={styles.title}>In-Browser Test Runner (475 Automated Tests)</h2>
         <p className={styles.description}>
           Every repository is backed by automated JUnit 5 and pytest suites. No mocked claims or
           hand-waving: run and inspect unit test executions verifying business logic, RFC adapters, and

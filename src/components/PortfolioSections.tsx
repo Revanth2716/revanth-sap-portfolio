@@ -20,7 +20,7 @@ export interface SapProject {
   id: string;
   title: string;
   category: string;
-  domain: 'all' | 'basis' | 'integration' | 'performance' | 'continuity' | 'clean-core' | 'transport' | 'upgrade';
+  domain: 'all' | 'basis' | 'integration' | 'performance' | 'continuity' | 'clean-core' | 'transport' | 'upgrade' | 'access';
   description: string;
   testsBadge: string;
   tags: string[];
@@ -125,6 +125,18 @@ export const SAP_PROJECTS: SapProject[] = [
     githubUrl: 'https://github.com/Revanth2716/sap-upgrade-readiness',
     image: '/screenshots/upgrade-readiness.png',
   },
+  {
+    id: 'authorization-analyzer',
+    title: 'SAP Authorisation & Access Governance Analyzer',
+    category: 'Authorisations, SoD Conflicts & Least Privilege',
+    domain: 'access',
+    description:
+      'Access governance for SAP landscapes: segregation-of-duties conflicts evaluated across the full composite role expansion — including the composite that bundles a conflict and hands it to every holder — authorisation drift where the same role holds different values in development and production, and the blast radius of each person in production.',
+    testsBadge: '58 Tests Passing (JUnit 5)',
+    tags: ['Java 8', 'Spring Boot', 'PFCG', 'Segregation of Duties', 'Role Expansion', 'Access Drift'],
+    githubUrl: 'https://github.com/Revanth2716/sap-authorization-analyzer',
+    image: '/screenshots/access-governance.png',
+  },
 ];
 
 interface PortfolioSectionsProps {
@@ -166,7 +178,7 @@ export default function PortfolioSections({ onInspectProject }: PortfolioSection
           className={`${styles.filterBtn} ${activeFilter === 'all' ? styles.filterBtnActive : ''}`}
           onClick={() => handleFilterClick('all')}
         >
-          All Systems (8)
+          All Systems (9)
         </button>
         <button
           className={`${styles.filterBtn} ${
@@ -223,6 +235,14 @@ export default function PortfolioSections({ onInspectProject }: PortfolioSection
           onClick={() => handleFilterClick('upgrade')}
         >
           Upgrades & Compatibility (1)
+        </button>
+        <button
+          className={`${styles.filterBtn} ${
+            activeFilter === 'access' ? styles.filterBtnActive : ''
+          }`}
+          onClick={() => handleFilterClick('access')}
+        >
+          Authorisations & SoD (1)
         </button>
       </div>
 

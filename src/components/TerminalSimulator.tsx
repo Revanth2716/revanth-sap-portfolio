@@ -150,7 +150,8 @@ export default function TerminalSimulator() {
   6. sap-backup-readiness        - Continuity & DR readiness (Java 8, 54 tests)
   7. sap-transport-analyzer      - Object conflicts & release train (Java 8, 65 tests)
   8. sap-upgrade-readiness       - Upgrade blockers & patch drift (Java 8, 56 tests)
-  Total: 417 Automated Tests Passing.`;
+  9. sap-authorization-analyzer  - SoD conflicts & access drift (Java 8, 58 tests)
+  Total: 475 Automated Tests Passing.`;
         break;
 
       case 'certs':
