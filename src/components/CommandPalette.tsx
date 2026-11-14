@@ -67,7 +67,7 @@ export default function CommandPalette({
     // Navigation
     {
       id: 'nav-projects',
-      title: 'Navigate to 9 Flagship SAP Repositories',
+      title: 'Navigate to 10 Flagship SAP Repositories',
       group: 'Navigation',
       icon: Layers,
       badge: '6 Repos',
@@ -107,10 +107,10 @@ export default function CommandPalette({
     },
     {
       id: 'nav-tests',
-      title: 'Navigate to In-Browser Test Runner (475 Tests)',
+      title: 'Navigate to In-Browser Test Runner (529 Tests)',
       group: 'Navigation',
       icon: Zap,
-      badge: '475 Tests',
+      badge: '529 Tests',
       handler: () => scrollTo('unit-tests'),
     },
     {

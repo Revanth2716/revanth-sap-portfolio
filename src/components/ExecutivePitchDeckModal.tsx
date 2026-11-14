@@ -68,7 +68,7 @@ const SLIDES: Slide[] = [
     highlight: 'HANA RPO Compliance, DR Verification & CAB Preparation',
     points: [
       'Measures backup freshness against signed RPO SLA and tracks restore test evidence expiration.',
-      'Published 9 distinct SAP open-source repositories with 475 automated tests on GitHub (Revanth2716).',
+      'Published 10 distinct SAP open-source repositories with 529 automated tests on GitHub (Revanth2716).',
       'Honest, demonstrable portfolio: every finding, screenshot, and trace is drawn from authentic running systems.',
       'Immediate availability for full-time Entry-Level SAP BASIS Analyst roles.',
     ],

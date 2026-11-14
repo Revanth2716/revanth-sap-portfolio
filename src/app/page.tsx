@@ -59,7 +59,7 @@ export default function Home() {
       {/* Synchronized Voice Studio & Equalizer */}
       <VoiceTeleprompter />
 
-      {/* 9 Flagship Open-Source SAP Repositories Showcase */}
+      {/* 10 Flagship Open-Source SAP Repositories Showcase */}
       <PortfolioSections onInspectProject={(title) => setInspectingProject(title)} />
 
       {/* 3D NetWeaver 7.5 Spatial Landscape (Three.js WebGL) */}
@@ -104,7 +104,7 @@ export default function Home() {
         <SystemStatusPage />
       </div>
 
-      {/* In-Browser Unit Test Runner (475 Tests across 9 Repos) */}
+      {/* In-Browser Unit Test Runner (529 Tests across 10 Repos) */}
       <UnitTestRunner />
 
       {/* Interactive SAPSH Terminal CLI Emulator */}

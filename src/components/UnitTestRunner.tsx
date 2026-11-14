@@ -139,6 +139,20 @@ const SUITES: TestSuite[] = [
       { name: 'theBlastRadius', expected: 'PASS (3 exposed in production, 2 in conflict)', durationMs: 0.28 },
     ],
   },
+  {
+    id: 'job-analyzer',
+    name: 'sap-job-analyzer',
+    repo: 'Batch Operations, Job Chains & Failure Root Cause',
+    testCount: 54,
+    framework: 'Java 8 · JUnit 5',
+    sampleTests: [
+      { name: 'theExtractBrokeTheChain', expected: 'PASS (3 jobs behind it never ran)', durationMs: 0.22 },
+      { name: 'fourJobsShareOneError', expected: 'PASS (1 cluster of 4, not 4 incidents)', durationMs: 0.18 },
+      { name: 'theSkipIsFoundThroughTheWholeChain', expected: 'PASS (posting 2 steps down still skipped)', durationMs: 0.25 },
+      { name: 'severityIsTheWorstFindingNotTheScoreBand', expected: 'PASS (skipped finance posting stays CRITICAL at 65)', durationMs: 0.14 },
+      { name: 'aSkippedJobDoesNotReportItselfAsSuccessful', expected: 'PASS (effective status SKIPPED, not OK)', durationMs: 0.2 },
+    ],
+  },
 ];
 
 export default function UnitTestRunner() {
@@ -166,7 +180,7 @@ export default function UnitTestRunner() {
           <CheckCircle2 size={14} />
           <span>Automated Quality Gates</span>
         </div>
-        <h2 className={styles.title}>In-Browser Test Runner (475 Automated Tests)</h2>
+        <h2 className={styles.title}>In-Browser Test Runner (529 Automated Tests)</h2>
         <p className={styles.description}>
           Every repository is backed by automated JUnit 5 and pytest suites. No mocked claims or
           hand-waving: run and inspect unit test executions verifying business logic, RFC adapters, and

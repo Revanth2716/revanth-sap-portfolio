@@ -20,7 +20,7 @@ export interface SapProject {
   id: string;
   title: string;
   category: string;
-  domain: 'all' | 'basis' | 'integration' | 'performance' | 'continuity' | 'clean-core' | 'transport' | 'upgrade' | 'access';
+  domain: 'all' | 'basis' | 'integration' | 'performance' | 'continuity' | 'clean-core' | 'transport' | 'upgrade' | 'access' | 'batch';
   description: string;
   testsBadge: string;
   tags: string[];
@@ -137,6 +137,18 @@ export const SAP_PROJECTS: SapProject[] = [
     githubUrl: 'https://github.com/Revanth2716/sap-authorization-analyzer',
     image: '/screenshots/access-governance.png',
   },
+  {
+    id: 'job-analyzer',
+    title: 'SAP Batch Job & Scheduling Failure Analyzer',
+    category: 'Batch Operations, Job Chains & Failure Root Cause',
+    domain: 'batch',
+    description:
+      'Batch operations for SAP landscapes: job chain impact analysis that follows the chain transitively in both directions to find every job that never ran behind a failed one, failure clustering by root cause so four jobs in four programs failing on one changed table is reported as one incident, plus stuck-job, repeated-failure, never-ran and runtime-regression detection with a per-job operational readiness score.',
+    testsBadge: '54 Tests Passing (JUnit 5)',
+    tags: ['Java 8', 'Spring Boot', 'SM37 / SM36', 'Job Chain Impact', 'Failure Clustering', 'Runtime Regression'],
+    githubUrl: 'https://github.com/Revanth2716/sap-job-analyzer',
+    image: '/screenshots/batch-overview.png',
+  },
 ];
 
 interface PortfolioSectionsProps {
@@ -165,7 +177,7 @@ export default function PortfolioSections({ onInspectProject }: PortfolioSection
         </div>
         <h2 className={styles.sectionTitle}>Flagship Open-Source SAP Repositories</h2>
         <p className={styles.sectionDescription}>
-          Six distinct, production-grade repositories with zero overlap published under{' '}
+          Ten distinct, production-grade repositories with zero overlap published under{' '}
           <code>github.com/Revanth2716</code>. Every project covers an authentic SAP BASIS workstream,
           features RFC-enabled ABAP modules, runs locally with seeded realistic NetWeaver scenarios, and is
           backed by extensive automated test suites.
@@ -178,7 +190,7 @@ export default function PortfolioSections({ onInspectProject }: PortfolioSection
           className={`${styles.filterBtn} ${activeFilter === 'all' ? styles.filterBtnActive : ''}`}
           onClick={() => handleFilterClick('all')}
         >
-          All Systems (9)
+          All Systems (10)
         </button>
         <button
           className={`${styles.filterBtn} ${
@@ -243,6 +255,14 @@ export default function PortfolioSections({ onInspectProject }: PortfolioSection
           onClick={() => handleFilterClick('access')}
         >
           Authorisations & SoD (1)
+        </button>
+        <button
+          className={`${styles.filterBtn} ${
+            activeFilter === 'batch' ? styles.filterBtnActive : ''
+          }`}
+          onClick={() => handleFilterClick('batch')}
+        >
+          Batch & Scheduling (1)
         </button>
       </div>
 

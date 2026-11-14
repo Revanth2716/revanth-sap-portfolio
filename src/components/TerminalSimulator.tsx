@@ -51,7 +51,7 @@ export default function TerminalSimulator() {
   tcode st03   - Workload analysis summary (response time breakdown)
   status       - NetWeaver landscape health (SID, Kernel, DB, Memory)
   about        - Summary of background, KL University (8.33 CGPA), Eezycode internship
-  projects     - List 6 open-source SAP repositories
+  projects     - List 10 open-source SAP repositories
   certs        - Verified certifications (Azure, Oracle, AWS, RPA, Scrum)
   contact      - Email, phone, LinkedIn, and GitHub links
   clear        - Clear terminal output history`;
@@ -151,7 +151,8 @@ export default function TerminalSimulator() {
   7. sap-transport-analyzer      - Object conflicts & release train (Java 8, 65 tests)
   8. sap-upgrade-readiness       - Upgrade blockers & patch drift (Java 8, 56 tests)
   9. sap-authorization-analyzer  - SoD conflicts & access drift (Java 8, 58 tests)
-  Total: 475 Automated Tests Passing.`;
+ 10. sap-job-analyzer            - Job chain impact & failure clustering (Java 8, 54 tests)
+  Total: 529 Automated Tests Passing.`;
         break;
 
       case 'certs':
